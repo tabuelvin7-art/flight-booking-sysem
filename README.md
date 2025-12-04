@@ -654,7 +654,7 @@ Give a ⭐️ if this project helped you!
 
 <div align="center">
 
-Made with ❤️ by [Your Name](https://github.com/tabuelvin7-art)
+Made with ❤️ by [Elvin Khisa](https://github.com/tabuelvin7-art)
 
 [⬆ Back to Top](#-skyline-travels---flight-booking-system)
 
