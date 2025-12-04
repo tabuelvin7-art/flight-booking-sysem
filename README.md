@@ -111,7 +111,7 @@ Fully optimized for mobile devices with hamburger menu and touch-friendly interf
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/skyline-travels.git
+git clone https://github.com/tabuelvin7-art/skyline-travels.git
 cd skyline-travels
 ```
 
@@ -481,105 +481,6 @@ Content-Type: application/json
   "email": "john@example.com",
   "phone": "1234567890"
 }
-```
-
-## 📁 Project Structure
-
-```
-skyline-travels/
-├── client/                          # Frontend React application
-│   ├── public/                      # Static files
-│   ├── src/
-│   │   ├── api/                     # API configuration
-│   │   │   └── axios.ts            # Axios instance
-│   │   ├── components/              # Reusable components
-│   │   │   ├── Alert.tsx
-│   │   │   ├── Avatar.tsx
-│   │   │   ├── Badge.tsx
-│   │   │   ├── BookingCard.tsx
-│   │   │   ├── Breadcrumb.tsx
-│   │   │   ├── Button.tsx
-│   │   │   ├── Card.tsx
-│   │   │   ├── DestinationCard.tsx
-│   │   │   ├── Divider.tsx
-│   │   │   ├── Dropdown.tsx
-│   │   │   ├── EmptyState.tsx
-│   │   │   ├── FilterBar.tsx
-│   │   │   ├── FlightCard.tsx
-│   │   │   ├── Footer.tsx
-│   │   │   ├── Header.tsx
-│   │   │   ├── Input.tsx
-│   │   │   ├── LoadingScreen.tsx
-│   │   │   ├── Modal.tsx
-│   │   │   ├── Pagination.tsx
-│   │   │   ├── ProgressBar.tsx
-│   │   │   ├── SearchBar.tsx
-│   │   │   ├── SkeletonLoader.tsx
-│   │   │   ├── Spinner.tsx
-│   │   │   ├── StatsCard.tsx
-│   │   │   ├── Tabs.tsx
-│   │   │   ├── Tooltip.tsx
-│   │   │   └── index.ts
-│   │   ├── pages/                   # Page components
-│   │   │   ├── admin/              # Admin pages
-│   │   │   │   ├── AdminDashboard.tsx
-│   │   │   │   ├── AdminProfile.tsx
-│   │   │   │   ├── BookingsManagement.tsx
-│   │   │   │   ├── DestinationsManagement.tsx
-│   │   │   │   ├── FlightsManagement.tsx
-│   │   │   │   └── UsersManagement.tsx
-│   │   │   ├── Booking.tsx
-│   │   │   ├── Dashboard.tsx
-│   │   │   ├── FlightDetails.tsx
-│   │   │   ├── Flights.tsx
-│   │   │   ├── Home.tsx
-│   │   │   ├── Login.tsx
-│   │   │   ├── MyBookings.tsx
-│   │   │   ├── Profile.tsx
-│   │   │   └── Register.tsx
-│   │   ├── store/                   # State management
-│   │   │   └── authStore.ts
-│   │   ├── App.tsx                  # Main app component
-│   │   ├── main.tsx                 # Entry point
-│   │   └── index.css                # Global styles
-│   ├── index.html
-│   ├── package.json
-│   ├── tailwind.config.js
-│   ├── tsconfig.json
-│   └── vite.config.ts
-│
-├── server/                          # Backend Node.js application
-│   ├── src/
-│   │   ├── config/                  # Configuration
-│   │   │   └── database.ts
-│   │   ├── middleware/              # Express middleware
-│   │   │   └── auth.ts
-│   │   ├── models/                  # Mongoose models
-│   │   │   ├── Booking.ts
-│   │   │   ├── Destination.ts
-│   │   │   ├── Flight.ts
-│   │   │   └── User.ts
-│   │   ├── routes/                  # API routes
-│   │   │   ├── auth.routes.ts
-│   │   │   ├── booking.routes.ts
-│   │   │   ├── destination.routes.ts
-│   │   │   ├── flight.routes.ts
-│   │   │   └── user.routes.ts
-│   │   ├── scripts/                 # Utility scripts
-│   │   │   └── createAdmin.ts
-│   │   ├── index.ts                 # Server entry point
-│   │   └── seed.ts                  # Database seeding
-│   ├── .env                         # Environment variables
-│   ├── package.json
-│   └── tsconfig.json
-│
-├── ADMIN_GUIDE.md                   # Admin panel documentation
-├── ADMIN_FUNCTIONALITY_STATUS.md    # Feature status
-├── COMPONENTS.md                    # Component library docs
-├── RESPONSIVE_DESIGN.md             # Responsive design guide
-├── README.md                        # This file
-└── package.json                     # Root package.json
-
 
 ## 🎨 Component Library
 
@@ -731,7 +632,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+- **Your Name** - *Initial work* - [YourGitHub](https://github.com/tabuelvin7-art)
 
 ## 🙏 Acknowledgments
 
@@ -752,7 +653,7 @@ Give a ⭐️ if this project helped you!
 
 <div align="center">
 
-Made with ❤️ by [Your Name](https://github.com/yourusername)
+Made with ❤️ by [Your Name](https://github.com/tabuelvin7-art)
 
 [⬆ Back to Top](#-skyline-travels---flight-booking-system)
 
