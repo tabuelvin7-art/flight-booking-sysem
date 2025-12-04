@@ -481,8 +481,9 @@ Content-Type: application/json
   "email": "john@example.com",
   "phone": "1234567890"
 }
+```
 
-## 🎨 Component Library
+### 🎨 Component Library
 
 The application includes 25+ reusable components:
 
