@@ -644,7 +644,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email support@skylinetravels.com or open an issue on GitHub.
+For support, email tabuelvin7@gmail.com or open an issue on GitHub.
 
 ## 🌟 Show Your Support
 
