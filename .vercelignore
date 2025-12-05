@@ -1,0 +1,5 @@
+node_modules
+*.log
+.DS_Store
+# Don't ignore .env as Vercel uses environment variables from dashboard
+# Don't ignore dist or public folders
