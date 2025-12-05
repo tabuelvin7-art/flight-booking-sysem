@@ -42,7 +42,7 @@ export default function FilterBar({ filters, onApplyFilters }: FilterBarProps) {
       </Button>
 
       {isOpen && (
-        <div className="absolute top-full mt-2 right-0 bg-white rounded-lg shadow-xl border border-gray-200 p-6 w-96 z-50">
+        <div className="fixed sm:absolute top-0 sm:top-full left-0 sm:left-auto right-0 sm:right-0 sm:mt-2 bg-white sm:rounded-lg shadow-xl border-t sm:border border-gray-200 p-6 w-full sm:w-96 z-50 h-full sm:h-auto overflow-y-auto sm:overflow-visible">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-bold text-lg">Filters</h3>
             <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-gray-600">

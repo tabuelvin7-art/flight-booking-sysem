@@ -63,42 +63,43 @@ export default function Booking() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Complete Your Booking</h1>
+      <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Complete Your Booking</h1>
       
       <Card className="mb-6" padding="lg">
         <div className="flex items-center gap-3 mb-6">
-          <div className="bg-blue-100 p-3 rounded-full">
-            <Plane className="w-6 h-6 text-blue-600" />
+          <div className="bg-blue-100 p-2 sm:p-3 rounded-full">
+            <Plane className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
           </div>
           <div>
-            <h2 className="text-xl font-bold">Flight Details</h2>
-            <p className="text-gray-600">{flight.airline} - {flight.flightNumber}</p>
+            <h2 className="text-lg sm:text-xl font-bold">Flight Details</h2>
+            <p className="text-sm sm:text-base text-gray-600">{flight.airline} - {flight.flightNumber}</p>
           </div>
         </div>
         
         <div className="space-y-3">
-          <div className="flex items-center gap-2 text-gray-700">
-            <MapPin className="w-5 h-5 text-gray-400" />
+          <div className="flex items-center gap-2 text-gray-700 text-sm sm:text-base">
+            <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 flex-shrink-0" />
             <span className="font-semibold">{flight.origin}</span>
             <span className="text-gray-400">→</span>
             <span className="font-semibold">{flight.destination}</span>
           </div>
-          <p className="text-sm text-gray-600">
+          <p className="text-xs sm:text-sm text-gray-600">
             Departure: {format(new Date(flight.departureTime), 'PPp')}
           </p>
-          <p className="text-3xl font-bold text-blue-600 mt-4">${flight.price} <span className="text-sm text-gray-500">per person</span></p>
+          <p className="text-2xl sm:text-3xl font-bold text-blue-600 mt-4">${flight.price} <span className="text-xs sm:text-sm text-gray-500">per person</span></p>
         </div>
       </Card>
 
       <Card className="mb-6" padding="lg">
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <div className="flex items-center gap-3">
-            <Users className="w-6 h-6 text-gray-600" />
-            <h2 className="text-xl font-bold">Passenger Details</h2>
+            <Users className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
+            <h2 className="text-lg sm:text-xl font-bold">Passenger Details</h2>
           </div>
           <Button variant="outline" size="sm" onClick={addPassenger}>
             <Plus className="w-4 h-4 mr-1" />
-            Add Passenger
+            <span className="hidden sm:inline">Add Passenger</span>
+            <span className="sm:hidden">Add</span>
           </Button>
         </div>
         
@@ -134,9 +135,9 @@ export default function Booking() {
       </Card>
 
       <Card padding="lg">
-        <div className="flex justify-between items-center mb-6">
-          <span className="text-xl font-bold">Total Amount</span>
-          <span className="text-4xl font-bold text-blue-600">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 mb-6">
+          <span className="text-lg sm:text-xl font-bold">Total Amount</span>
+          <span className="text-3xl sm:text-4xl font-bold text-blue-600">
             ${flight.price * passengers.length}
           </span>
         </div>
