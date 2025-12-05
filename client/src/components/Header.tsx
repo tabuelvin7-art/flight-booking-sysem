@@ -103,7 +103,7 @@ export default function Header() {
                   </DropdownItem>
                 </Dropdown>
               ) : (
-                <>
+                <div className="flex items-center gap-4">
                   <Link to="/login" className="text-gray-700 hover:text-blue-600 font-medium text-sm lg:text-base">Login</Link>
                   <Link
                     to="/register"
@@ -111,7 +111,7 @@ export default function Header() {
                   >
                     Sign Up
                   </Link>
-                </>
+                </div>
               )}
             </div>
 
