@@ -6,6 +6,7 @@ import api from '../api/axios';
 export default function Home() {
   const navigate = useNavigate();
   const [destinations, setDestinations] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     fetchDestinations();
@@ -18,6 +19,14 @@ export default function Home() {
     } catch (error) {
       console.error('Error fetching destinations:', error);
     }
+  };
+
+  const handlePrevious = () => {
+    setCurrentIndex((prev) => (prev === 0 ? Math.max(0, destinations.length - 3) : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev >= destinations.length - 3 ? 0 : prev + 1));
   };
 
   return (
@@ -92,17 +101,25 @@ export default function Home() {
             <p className="text-gray-600">Unleash Your Wanderlust With Skyline Travels</p>
           </div>
           <div className="flex gap-2">
-            <button className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition">
+            <button 
+              onClick={handlePrevious}
+              disabled={destinations.length <= 3}
+              className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+            >
               <ChevronLeft className="w-5 h-5" />
             </button>
-            <button className="p-3 bg-gray-900 text-white rounded-full shadow-md hover:shadow-lg transition">
+            <button 
+              onClick={handleNext}
+              disabled={destinations.length <= 3}
+              className="p-3 bg-gray-900 text-white rounded-full shadow-md hover:shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+            >
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {destinations.slice(0, 3).map((dest: any) => (
+          {destinations.slice(currentIndex, currentIndex + 3).map((dest: any) => (
             <div key={dest._id} className="bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-soft-lg transition group">
               <div className="relative h-56 overflow-hidden">
                 <img 
