@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Plane, Ticket, MapPin, TrendingUp } from 'lucide-react';
+import { Plane, Ticket, MapPin } from 'lucide-react';
 import api from '../api/axios';
 import { useAuthStore } from '../store/authStore';
 import { StatsCard, BookingCard, LoadingScreen, EmptyState, Tabs } from '../components';
