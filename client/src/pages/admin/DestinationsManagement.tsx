@@ -94,11 +94,12 @@ export default function DestinationsManagement({ onUpdate }: DestinationsManagem
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold">Manage Destinations</h2>
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+        <h2 className="text-xl sm:text-2xl font-bold">Manage Destinations</h2>
         <Button onClick={() => setIsModalOpen(true)}>
           <Plus className="w-4 h-4 mr-2" />
-          Add Destination
+          <span className="hidden sm:inline">Add Destination</span>
+          <span className="sm:hidden">Add</span>
         </Button>
       </div>
 
@@ -111,7 +112,7 @@ export default function DestinationsManagement({ onUpdate }: DestinationsManagem
           onAction={() => setIsModalOpen(true)}
         />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {destinations.map((destination: any) => (
             <Card key={destination._id} padding="sm">
               <img

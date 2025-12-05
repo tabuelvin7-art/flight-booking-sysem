@@ -26,7 +26,7 @@ export default function BookingsManagement() {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-6">All Bookings</h2>
+      <h2 className="text-xl sm:text-2xl font-bold mb-6">All Bookings</h2>
 
       {bookings.length === 0 ? (
         <EmptyState

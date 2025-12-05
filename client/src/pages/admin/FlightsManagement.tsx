@@ -104,11 +104,12 @@ export default function FlightsManagement({ onUpdate }: FlightsManagementProps) 
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold">Manage Flights</h2>
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+        <h2 className="text-xl sm:text-2xl font-bold">Manage Flights</h2>
         <Button onClick={() => setIsModalOpen(true)}>
           <Plus className="w-4 h-4 mr-2" />
-          Add Flight
+          <span className="hidden sm:inline">Add Flight</span>
+          <span className="sm:hidden">Add</span>
         </Button>
       </div>
 
@@ -124,20 +125,20 @@ export default function FlightsManagement({ onUpdate }: FlightsManagementProps) 
         <div className="space-y-4">
           {flights.map((flight: any) => (
             <Card key={flight._id} padding="lg">
-              <div className="flex justify-between items-start">
+              <div className="flex flex-col sm:flex-row justify-between gap-4">
                 <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-3">
-                    <h3 className="text-xl font-bold">{flight.airline}</h3>
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3">
+                    <h3 className="text-lg sm:text-xl font-bold">{flight.airline}</h3>
                     <Badge variant="info">{flight.flightNumber}</Badge>
                   </div>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm">
                     <div>
                       <p className="text-gray-600">Route</p>
                       <p className="font-semibold">{flight.origin} → {flight.destination}</p>
                     </div>
                     <div>
                       <p className="text-gray-600">Departure</p>
-                      <p className="font-semibold">{format(new Date(flight.departureTime), 'PPp')}</p>
+                      <p className="font-semibold break-words">{format(new Date(flight.departureTime), 'PPp')}</p>
                     </div>
                     <div>
                       <p className="text-gray-600">Price</p>
@@ -149,7 +150,7 @@ export default function FlightsManagement({ onUpdate }: FlightsManagementProps) 
                     </div>
                   </div>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex sm:flex-col gap-2 self-start">
                   <Button variant="outline" size="sm" onClick={() => handleEdit(flight)}>
                     <Edit className="w-4 h-4" />
                   </Button>
@@ -170,7 +171,7 @@ export default function FlightsManagement({ onUpdate }: FlightsManagementProps) 
         size="lg"
       >
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Input
               label="Airline"
               required
@@ -184,7 +185,7 @@ export default function FlightsManagement({ onUpdate }: FlightsManagementProps) 
               onChange={(e) => setFormData({ ...formData, flightNumber: e.target.value })}
             />
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Input
               label="Origin"
               required
@@ -198,7 +199,7 @@ export default function FlightsManagement({ onUpdate }: FlightsManagementProps) 
               onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
             />
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Input
               label="Departure Time"
               type="datetime-local"
@@ -214,7 +215,7 @@ export default function FlightsManagement({ onUpdate }: FlightsManagementProps) 
               onChange={(e) => setFormData({ ...formData, arrivalTime: e.target.value })}
             />
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Input
               label="Price ($)"
               type="number"

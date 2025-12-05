@@ -29,8 +29,8 @@ export default function UsersManagement() {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold">Manage Users</h2>
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-6">
+        <h2 className="text-xl sm:text-2xl font-bold">Manage Users</h2>
         <Badge variant="info">{users.length} Total Users</Badge>
       </div>
 
@@ -41,7 +41,7 @@ export default function UsersManagement() {
           description="Users will appear here once they register"
         />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {users.map((user: any) => (
             <Card key={user._id} padding="lg" hover>
               <div className="flex items-start gap-4">
