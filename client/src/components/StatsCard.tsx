@@ -24,16 +24,16 @@ export default function StatsCard({ title, value, icon: Icon, trend, color = 'bl
     <Card hover padding="lg">
       <div className="flex items-start justify-between">
         <div>
-          <p className="text-sm text-gray-600 mb-2">{title}</p>
-          <p className="text-3xl font-bold text-gray-900">{value}</p>
+          <p className="text-xs sm:text-sm text-gray-600 mb-2">{title}</p>
+          <p className="text-2xl sm:text-3xl font-bold text-gray-900">{value}</p>
           {trend && (
-            <p className={`text-sm mt-2 ${trend.isPositive ? 'text-green-600' : 'text-red-600'}`}>
+            <p className={`text-xs sm:text-sm mt-2 ${trend.isPositive ? 'text-green-600' : 'text-red-600'}`}>
               {trend.isPositive ? '↑' : '↓'} {Math.abs(trend.value)}%
             </p>
           )}
         </div>
-        <div className={`p-3 rounded-full ${colors[color]}`}>
-          <Icon className="w-6 h-6" />
+        <div className={`p-2 sm:p-3 rounded-full ${colors[color]} flex-shrink-0`}>
+          <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
         </div>
       </div>
     </Card>

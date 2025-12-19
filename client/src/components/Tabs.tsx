@@ -16,13 +16,13 @@ export default function Tabs({ tabs, defaultTab }: TabsProps) {
 
   return (
     <div>
-      <div className="border-b border-gray-200">
-        <div className="flex gap-8">
+      <div className="border-b border-gray-200 overflow-x-auto">
+        <div className="flex gap-4 sm:gap-6 lg:gap-8 min-w-max px-1">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`pb-4 px-1 font-medium transition-colors relative ${
+              className={`pb-3 sm:pb-4 px-1 font-medium transition-colors relative whitespace-nowrap text-sm sm:text-base ${
                 activeTab === tab.id
                   ? 'text-blue-600'
                   : 'text-gray-600 hover:text-gray-900'
@@ -36,7 +36,7 @@ export default function Tabs({ tabs, defaultTab }: TabsProps) {
           ))}
         </div>
       </div>
-      <div className="mt-6">
+      <div className="mt-4 sm:mt-6">
         {tabs.find((tab) => tab.id === activeTab)?.content}
       </div>
     </div>
